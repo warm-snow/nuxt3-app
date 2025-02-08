@@ -10,7 +10,8 @@
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "lint:prettier": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,less,scss,vue,html,md}\""
+    "lint:prettier": "prettier . --write",
+    "lint:stylelint": "stylelint --cache --fix \"**/*.{vue,less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/"
   },
   "dependencies": {
     "nuxt": "^3.15.4",
@@ -20,7 +21,11 @@
   "devDependencies": {
     "@nuxt/eslint": "^1.0.1",
     "eslint": "^9.20.0",
+    "postcss-html": "^1.8.0",
     "prettier": "3.4.2",
+    "stylelint": "^16.14.1",
+    "stylelint-config-recommended-vue": "^1.6.0",
+    "stylelint-config-standard": "^37.0.0",
     "typescript": "^5.7.3"
   }
 }
